@@ -10,7 +10,40 @@
   <title>Akbar Khamidov | Portfolio</title>
 </head>
 <body>
-  <h1>Hello World</h1>
+  <div id="particles-js"></div>
+  <nav>
+    <div class="id">
+      <img src="./img/portrait.jpg" alt="self portrait" >
+      <h1>Akbar Khamidov</h1>
+    </div>
+    <ul class="nav-items">
+      <li id="active" class="item" id="active"><a href="#"> <i class="fas fa-home" ></i>&nbsp; HOME <i class="index fas fa-caret-left"></i></a></li>
+      <li class="item"><a href="#"> <i class="fas fa-user" ></i>&nbsp; ABOUT</a></li>
+      <li class="item"><a href="#"> <i class="fas fa-id-card" ></i>&nbsp; RESUME</a></li>
+      <li class="item"><a href="#"> <i class="fas fa-briefcase" ></i>&nbsp; PORTFOLIO</a></li>
+      <li class="item"><a href="#"> <i class="fab fa-readme" ></i>&nbsp; BLOG</a></li>
+      <li class="item"><a href="#"> <i class="fas fa-envelope" ></i>&nbsp; CONTACT</a></li>
+    </ul>
+    <footer>
+      <div class="social">
+        <i class="fab fa-twitter-square"></i>
+        <i class="fab fa-github-square"></i>
+        <i class="fab fa-linkedin"></i>
+        <i class="fab fa-telegram"></i>
+      </div>
+      <p>2019 &COPY; Akbar Khamidov. All&nbsp;Rights Reserved.</p>
+    </footer>
+  </nav>
+  <section class="intro">
+    <header>
+      <h1 class="primary-text">Akbar <span>Khamidov</span></h1>
+      <h2 class="secondary-text">I am a <span class="title">Web Developer</span></h2>
+    </header>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script src="js/main.js"></script>
+  <script>
+    particlesJS.load('particles-js', 'js/particles_config.json', function(){console.log('Particles JS has been loaded')});
+  </script>
 </body>
 </html>

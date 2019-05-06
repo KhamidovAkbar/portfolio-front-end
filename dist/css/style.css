@@ -9,7 +9,127 @@
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  font-family: sans-serif, 'Halvetica'; }
   @media only screen and (max-width: 68.75em) {
     html {
       font-size: 50%; } }
+
+body {
+  display: flex;
+  position: relative; }
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  background: #020024;
+  background: linear-gradient(84deg, #020024 0%, #093679 66%, #1a3c78 100%); }
+
+nav {
+  max-width: 15%;
+  height: 100vh;
+  background: #00002e;
+  opacity: .88;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  nav img {
+    display: block;
+    opacity: 1;
+    height: 35vh;
+    width: 99%; }
+  nav .id {
+    position: relative;
+    height: 35vh;
+    width: 100%; }
+  nav h1 {
+    position: absolute;
+    top: 18.2rem;
+    display: inline-block;
+    background-color: rgba(37, 78, 123, 0.9);
+    color: white;
+    padding: 1rem 0.3rem;
+    width: 100%;
+    font-family: serif;
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center; }
+
+.nav-items {
+  list-style: none;
+  display: block;
+  font-size: 1.4rem; }
+  .nav-items .item {
+    padding: 1.5rem; }
+    .nav-items .item:not(:last-child) {
+      border-bottom: 1px #202226 solid; }
+    .nav-items .item a,
+    .nav-items .item a:link,
+    .nav-items .item a:visited,
+    .nav-items .item a:active {
+      text-decoration: none;
+      text-align: left;
+      color: #777777;
+      font-weight: 100;
+      cursor: pointer;
+      display: block;
+      width: 12rem;
+      margin: 0 auto;
+      outline: 0; }
+    .nav-items .item .index {
+      font-size: 1.3em;
+      margin-left: 3.5rem; }
+    .nav-items .item a:hover {
+      color: #51bce7; }
+      .nav-items .item a:hover .item {
+        border-bottom: 1px #51bce7 solid; }
+  .nav-items #active {
+    color: #51bce7; }
+
+.social {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 1.2rem;
+  font-size: 3rem;
+  color: #777777; }
+  .social i:hover {
+    color: #51bce7; }
+
+footer p {
+  font-size: 1.1rem;
+  color: #777777;
+  text-align: center;
+  padding: 2rem 1rem; }
+
+.intro {
+  width: 100%;
+  height: 10rem;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto; }
+  .intro .primary-text {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 5rem;
+    font-weight: 500;
+    font-family: serif;
+    color: white; }
+    .intro .primary-text span {
+      color: #51bce7;
+      font-weight: 600; }
+  .intro .secondary-text {
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 100; }
+    .intro .secondary-text .title {
+      padding: .5rem;
+      font-size: 4rem;
+      font-weight: 500;
+      border-bottom: 2px solid #0a76eb; }
