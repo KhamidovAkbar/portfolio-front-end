@@ -125,11 +125,18 @@ footer p {
       font-weight: 600; }
   .intro .secondary-text {
     color: white;
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-align: center;
     font-weight: 100; }
-    .intro .secondary-text .title {
+    .intro .secondary-text #title {
       padding: .5rem;
-      font-size: 4rem;
+      font-size: 3rem;
       font-weight: 500;
       border-bottom: 2px solid #0a76eb; }
+      .intro .secondary-text #title span {
+        border-right: .05em solid;
+        animation: caret 1s steps(1) infinite; }
+
+@keyframes caret {
+  50% {
+    border-color: transparent; } }
