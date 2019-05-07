@@ -22,7 +22,7 @@
 
 document.addEventListener('DOMContentLoaded', function(event) {
 	// array with texts to type in typewriter
-	var dataText = [ 'Web Developer', 'Programmer', 'Freelancer', 'Entrepreneur', 'UI/UX Designer' ];
+	var dataText = [ 'Web Developer', 'Programmer', 'Freelancer', 'Entrepreneur JR', 'UI/UX Designer' ];
 
 	// type one text in the typwriter
 	// keeps calling itself until the text is finished
