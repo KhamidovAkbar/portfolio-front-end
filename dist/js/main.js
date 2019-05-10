@@ -22,7 +22,7 @@
 
 document.addEventListener('DOMContentLoaded', function(event) {
 	// array with texts to type in typewriter
-	var dataText = [ 'Web Developer', 'Programmer', 'Freelancer', 'Entrepreneur JR', 'UI/UX Designer' ];
+	var dataText = [ 'Web Developer', 'CS Student', 'Freelancer', 'Entrepreneur JR', 'UI/UX Designer' ];
 
 	// type one text in the typwriter
 	// keeps calling itself until the text is finished
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 		if (typeof dataText[i] == 'undefined') {
 			setTimeout(function() {
 				StartTextAnimation(0);
-			}, 3000);
+			}, 1);
 		}
 		// check if dataText[i] exists
 		if (i < dataText[i].length) {
