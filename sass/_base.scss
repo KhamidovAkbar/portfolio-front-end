@@ -123,7 +123,7 @@ nav {
 
 		.index {
 			font-size: 1.3em;
-			margin-left: 1rem;
+			margin-left: 0.5rem;
 		}
 
 		a:hover {
@@ -225,4 +225,18 @@ footer p {
 	height: 100vh;
 	padding: 5rem;
 	overflow: scroll;
+}
+
+.header-primary,
+.header-icon {
+	color: #ffffff;
+	font-size: 4rem;
+	font-weight: 500;
+}
+
+.header-secondary {
+	color: #ffffff;
+	font-size: 3rem;
+	font-weight: 400;
+	padding: 4rem 0 2rem;
 }
