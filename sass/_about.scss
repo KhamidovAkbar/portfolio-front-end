@@ -1,76 +1,63 @@
-.container {
-	hr {
-		color: #51bce7;
-	}
+.wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 
-	header {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-	}
+	.credentials,
+	.description {
+		max-width: 90%;
+		font-size: 1.5rem;
+		color: #ffffff;
+		line-height: 3rem;
 
-	.wrapper {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-
-		.credentials,
-		.description {
-			max-width: 90%;
-			font-size: 1.5rem;
+		a,
+		a:link,
+		a:visited,
+		a:active {
 			color: #ffffff;
-			line-height: 3rem;
-
-			a,
-			a:link,
-			a:visited,
-			a:active {
-				color: #ffffff;
-				text-decoration: none;
-				outline: 0;
-				border-bottom: 1px solid #51bce7;
-			}
-
-			#signature {
-				margin: 3rem;
-				width: 70%;
-			}
+			text-decoration: none;
+			outline: 0;
+			border-bottom: 1px solid #51bce7;
 		}
 
-		.credentials {
-			font-size: 2.2rem;
+		#signature {
+			display: none;
+		}
+	}
 
-			ul {
-				line-height: 4rem;
-				list-style-type: none;
+	.credentials {
+		font-size: 2.2rem;
 
-				.title {
-					font-family: 'Times New Roman', Times, serif;
-					font-size: 2.3rem;
-					font-weight: 600;
-					border-bottom: 2px solid #51bce7;
-				}
+		ul {
+			line-height: 4rem;
+			list-style-type: none;
+
+			.title {
+				font-family: 'Times New Roman', Times, serif;
+				font-size: 2.3rem;
+				font-weight: 600;
+				border-bottom: 2px solid #51bce7;
 			}
-			a,
-			a:link,
-			a:visited,
-			a:active {
-				color: #ffffff;
-				display: inline-block;
-				background-color: #00002e;
-				border: 1px solid #51bce7;
-				text-transform: uppercase;
-				font-size: 1.4rem;
-				margin-top: 2rem;
-				padding: 1rem;
-				outline: 0;
+		}
+		a,
+		a:link,
+		a:visited,
+		a:active {
+			color: #ffffff;
+			display: inline-block;
+			background-color: #00002e;
+			border: 1px solid #51bce7;
+			text-transform: uppercase;
+			font-size: 1.4rem;
+			margin-top: 2rem;
+			padding: 1rem;
+			outline: 0;
 
-				&:hover {
-					background: #51bce7;
-					cursor: pointer;
-					color: #00002e;
-					border: 2px solid #00002e;
-				}
+			&:hover {
+				background: #51bce7;
+				cursor: pointer;
+				color: #00002e;
+				border: 2px solid #00002e;
 			}
 		}
 	}

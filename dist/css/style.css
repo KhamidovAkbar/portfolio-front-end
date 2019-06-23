@@ -45,21 +45,16 @@ nav {
     height: 35vh;
     width: 99%; }
   nav .id {
-    position: relative;
     height: 35vh;
-    width: 100%; }
+    width: 100%;
+    margin-bottom: 3rem; }
   nav h1 {
-    position: absolute;
-    top: 18.2rem;
-    display: inline-block;
     background-color: rgba(37, 78, 123, 0.9);
     color: white;
     padding: 1rem 0.3rem;
     width: 100%;
-    font-family: serif;
-    font-size: 1.8rem;
-    font-weight: 500;
-    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 400;
     text-align: center; }
 
 .nav-items {
@@ -176,46 +171,45 @@ footer p {
   flex-direction: row;
   justify-content: space-between; }
 
-.container .wrapper {
+.wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between; }
-  .container .wrapper .credentials,
-  .container .wrapper .description {
+  .wrapper .credentials,
+  .wrapper .description {
     max-width: 90%;
     font-size: 1.5rem;
     color: #ffffff;
     line-height: 3rem; }
-    .container .wrapper .credentials a,
-    .container .wrapper .credentials a:link,
-    .container .wrapper .credentials a:visited,
-    .container .wrapper .credentials a:active,
-    .container .wrapper .description a,
-    .container .wrapper .description a:link,
-    .container .wrapper .description a:visited,
-    .container .wrapper .description a:active {
+    .wrapper .credentials a,
+    .wrapper .credentials a:link,
+    .wrapper .credentials a:visited,
+    .wrapper .credentials a:active,
+    .wrapper .description a,
+    .wrapper .description a:link,
+    .wrapper .description a:visited,
+    .wrapper .description a:active {
       color: #ffffff;
       text-decoration: none;
       outline: 0;
       border-bottom: 1px solid #51bce7; }
-    .container .wrapper .credentials #signature,
-    .container .wrapper .description #signature {
-      margin: 3rem;
-      width: 70%; }
-  .container .wrapper .credentials {
+    .wrapper .credentials #signature,
+    .wrapper .description #signature {
+      display: none; }
+  .wrapper .credentials {
     font-size: 2.2rem; }
-    .container .wrapper .credentials ul {
+    .wrapper .credentials ul {
       line-height: 4rem;
       list-style-type: none; }
-      .container .wrapper .credentials ul .title {
+      .wrapper .credentials ul .title {
         font-family: 'Times New Roman', Times, serif;
         font-size: 2.3rem;
         font-weight: 600;
         border-bottom: 2px solid #51bce7; }
-    .container .wrapper .credentials a,
-    .container .wrapper .credentials a:link,
-    .container .wrapper .credentials a:visited,
-    .container .wrapper .credentials a:active {
+    .wrapper .credentials a,
+    .wrapper .credentials a:link,
+    .wrapper .credentials a:visited,
+    .wrapper .credentials a:active {
       color: #ffffff;
       display: inline-block;
       background-color: #00002e;
@@ -225,10 +219,10 @@ footer p {
       margin-top: 2rem;
       padding: 1rem;
       outline: 0; }
-      .container .wrapper .credentials a:hover,
-      .container .wrapper .credentials a:link:hover,
-      .container .wrapper .credentials a:visited:hover,
-      .container .wrapper .credentials a:active:hover {
+      .wrapper .credentials a:hover,
+      .wrapper .credentials a:link:hover,
+      .wrapper .credentials a:visited:hover,
+      .wrapper .credentials a:active:hover {
         background: #51bce7;
         cursor: pointer;
         color: #00002e;

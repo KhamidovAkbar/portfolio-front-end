@@ -1,9 +1,5 @@
-hr {
-	color: #51bce7;
-}
-
-header {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
+.grid-wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 3rem 3rem 3rem;
 }
