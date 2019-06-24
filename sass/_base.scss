@@ -92,7 +92,7 @@ nav {
 .nav-items {
 	list-style: none;
 	display: block;
-	font-size: 1.4rem;
+	font-size: 1.5rem;
 
 	.item {
 		padding: 1.5rem;
@@ -114,11 +114,15 @@ nav {
 			width: 12rem;
 			margin: 0 auto;
 			outline: 0;
+			position: relative;
 		}
 
 		.index {
-			font-size: 1.3em;
-			margin-left: 0.5rem;
+			font-size: 1.5em;
+			margin-left: 0.2rem;
+			position: absolute;
+			top: -3px;
+			right: -4rem;
 		}
 
 		a:hover {
@@ -132,6 +136,7 @@ nav {
 
 	#active {
 		color: #51bce7;
+		font-weight: 500;
 	}
 }
 
@@ -221,7 +226,6 @@ footer p {
 	width: 100%;
 	height: 100vh;
 	padding: 5rem;
-	overflow: scroll;
 }
 
 .header-primary,
