@@ -172,30 +172,39 @@ footer p {
   font-weight: 500; }
 
 .header-secondary {
+  display: block;
   color: #ffffff;
   font-size: 3rem;
   font-weight: 400;
   padding: 4rem 0 2rem; }
 
-.container hr {
-  color: #51bce7; }
+.header-tertiary {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 200;
+  padding: 4rem 0 2rem; }
 
-.container header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between; }
+.container {
+  overflow-y: scroll; }
+  .container hr {
+    color: #51bce7; }
+  .container header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
 
 .wrapper {
   display: flex;
   flex-direction: row;
-  justify-content: space-between; }
+  justify-content: space-between;
+  margin-bottom: 2rem; }
   .wrapper .credentials,
   .wrapper .description {
     max-width: 90%;
     font-size: 1.7rem;
     color: #ffffff;
     line-height: 3rem;
-    font-weight: 300; }
+    font-weight: 100; }
     .wrapper .credentials a,
     .wrapper .credentials a:link,
     .wrapper .credentials a:visited,
@@ -241,5 +250,21 @@ footer p {
       .wrapper .credentials a:active:hover {
         background: #51bce7;
         cursor: pointer;
+        font-weight: 500;
         color: #00002e;
         border: 2px solid #00002e; }
+
+#skills {
+  margin-right: 1rem 5rem; }
+  #skills .skills-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+    #skills .skills-list .skills-list-table ul {
+      margin-left: 2rem; }
+      #skills .skills-list .skills-list-table ul li {
+        color: #ffffff;
+        font-size: 1.5rem;
+        font-weight: 100;
+        line-height: 2rem;
+        letter-spacing: 1px; }

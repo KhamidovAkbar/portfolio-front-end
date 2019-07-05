@@ -2,6 +2,7 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	margin-bottom: 2rem;
 
 	.credentials,
 	.description {
@@ -9,7 +10,7 @@
 		font-size: 1.7rem;
 		color: #ffffff;
 		line-height: 3rem;
-		font-weight: 300;
+		font-weight: 100;
 
 		a,
 		a:link,
@@ -58,8 +59,32 @@
 			&:hover {
 				background: #51bce7;
 				cursor: pointer;
+				font-weight: 500;
 				color: #00002e;
 				border: 2px solid #00002e;
+			}
+		}
+	}
+}
+
+// =================================================== SKILLS SECTION ==================================//
+#skills {
+	margin-right: 1rem 5rem;
+	.skills-list {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+
+		.skills-list-table {
+			ul {
+				margin-left: 2rem;
+				li {
+					color: #ffffff;
+					font-size: 1.5rem;
+					font-weight: 100;
+					line-height: 2rem;
+					letter-spacing: 1px;
+				}
 			}
 		}
 	}
