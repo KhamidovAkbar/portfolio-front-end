@@ -273,3 +273,21 @@ footer p {
 		justify-content: space-between;
 	}
 }
+
+.notice {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 20rem;
+
+	&-text {
+		font-size: 3rem;
+		height: 100%;
+		width: 95rem;
+		background: yellow;
+		color: red;
+		padding: 1rem;
+		border-radius: 1rem;
+		vertical-align: middle;
+	}
+}
