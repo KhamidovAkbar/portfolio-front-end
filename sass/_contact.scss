@@ -1,0 +1,40 @@
+.contact {
+	width: 50%;
+
+	ul {
+		margin: 5rem;
+
+		li {
+			list-style: none;
+			display: grid;
+			grid-template-columns: 0.5fr 1fr;
+			grid-gap: 1rem;
+
+			div {
+				font-size: 2rem;
+				padding: 1rem;
+				color: white;
+				font-weight: 200;
+			}
+
+			a,
+			a:link,
+			a:visited,
+			a:active {
+				color: #51bce7;
+				display: inline-block;
+				text-decoration: none;
+				font-size: 2rem;
+				font-weight: 400;
+				text-decoration: none;
+				padding: 1rem;
+				text-align: left;
+				outline: 0;
+
+				&:hover {
+					border-left: 1px solid #51bce7;
+				}
+			}
+		}
+	}
+}
