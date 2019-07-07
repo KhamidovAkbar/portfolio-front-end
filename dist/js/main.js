@@ -1,28 +1,27 @@
 // FOR HAMBURGER MENU
-// const menu = document.querySelector('.menu');
-// const menuBtn = document.querySelector('.menu_btn');
-// const menuBranding = document.querySelector('.menu__branding');
-// const navbar = document.querySelector('.navbar');
-// const navItems = document.querySelectorAll('.navbar__item');
 
-// let showMenu = false;
+// Select DOM Items
+const menuBtn = document.querySelector('.menu_btn');
+const menu = document.querySelector('nav');
+const navContainer = document.querySelector('.nav-items');
+const items = document.querySelectorAll('.item');
+const id = document.querySelector('.id');
+const footer = document.querySelector('footer');
 
-// menuBtn.addEventListener('click', toggleMenu);
-
-// function toggleMenu() {
-// 	menuBtn.classList.toggle('close');
-// 	menu.classList.toggle('show');
-// 	menuBranding.classList.toggle('show');
-// 	navbar.classList.toggle('show');
-// 	navItems.forEach((item) => item.classList.toggle('show'));
-// 	showMenu = !showMenu;
-// }
+function toggleMenu(x) {
+	x.classList.toggle('change');
+	menu.classList.toggle('show');
+	navContainer.classList.toggle('show');
+	// id.classList.toggle('show');
+	// footer.classList.toggle('show');
+	items.forEach((item) => item.classList.toggle('show'));
+}
 
 // Typewriter effect
 
 document.addEventListener('DOMContentLoaded', function(event) {
 	// array with texts to type in typewriter
-	var dataText = [ 'Web Developer', 'CS Student', 'Freelancer', 'Entrepreneur JR', 'UI/UX Designer' ];
+	var dataText = [ 'Web Developer', 'UI/UX Designer', 'Freelancer', 'CS Student' ];
 
 	// type one text in the typwriter
 	// keeps calling itself until the text is finished

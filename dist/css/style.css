@@ -24,7 +24,9 @@ html {
 body {
   display: flex;
   width: 100%;
-  height: 100vh; }
+  height: 100vh;
+  position: relative;
+  animation: all 3s ease-out; }
 
 #particles-js {
   position: absolute;
@@ -48,6 +50,13 @@ nav {
   -webkit-box-shadow: 8px 2px 12px 0px #071142;
   -moz-box-shadow: 8px 2px 12px 0px #071142;
   box-shadow: 8px 2px 12px 0px #071142; }
+  @media only screen and (min-width: 320px) {
+    nav {
+      display: none;
+      margin-left: -100rem;
+      max-width: 75%;
+      opacity: 1;
+      animation: all 3s ease-out; } }
   nav img {
     display: block;
     opacity: 1;
@@ -82,6 +91,11 @@ nav {
   display: block;
   font-size: 1.5rem;
   margin-top: 5rem; }
+  @media only screen and (min-width: 320px) {
+    .nav-items {
+      display: none;
+      margin-left: -100rem;
+      margin-top: 1rem; } }
   .nav-items .item {
     padding: 1.5rem; }
     .nav-items .item:not(:last-child) {
@@ -120,6 +134,9 @@ nav {
   margin: 0 1.2rem;
   font-size: 3rem;
   color: #777777; }
+  @media only screen and (min-width: 320px) {
+    .social {
+      margin-top: 1rem; } }
   .social a {
     text-decoration: none;
     outline: 0;
@@ -138,11 +155,17 @@ footer p {
   height: 10rem;
   z-index: -1;
   position: absolute;
-  top: 0;
+  top: -10rem;
   bottom: 0;
   left: 0;
-  right: 0;
+  right: -25rem;
   margin: auto; }
+  @media only screen and (min-width: 320px) {
+    .intro {
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0rem; } }
   .intro .primary-text {
     text-align: center;
     text-transform: uppercase;
@@ -150,6 +173,9 @@ footer p {
     font-weight: 500;
     font-family: serif;
     color: white; }
+    @media only screen and (min-width: 320px) {
+      .intro .primary-text {
+        font-size: 3rem; } }
     .intro .primary-text span {
       color: #51bce7;
       font-weight: 600; }
@@ -221,6 +247,39 @@ footer p {
     padding: 1rem;
     border-radius: 1rem;
     vertical-align: middle; }
+
+.menu_btn {
+  display: inline-block;
+  cursor: pointer;
+  position: absolute;
+  top: 2rem;
+  right: 2rem; }
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 25px;
+  height: 3px;
+  background: #51bce7;
+  margin: 6px 0;
+  transition: 0.4s;
+  border-radius: 2px; }
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-5px, 4px); }
+
+.change .bar2 {
+  opacity: 0; }
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px); }
+
+.show {
+  display: block;
+  margin-left: 0;
+  animation: all 3s ease-out; }
 
 .wrapper {
   display: flex;
