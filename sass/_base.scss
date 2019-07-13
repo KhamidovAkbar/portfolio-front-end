@@ -1,8 +1,8 @@
 $profile-shadow: 0 2rem 6rem rgba(20, 5, 45, 0.302);
 $hover-shadow: -2px 0px 21px 12px rgba(81, 188, 231, 0.75);
 
-@mixin easy {
-	transition: all 0.5s ease-out;
+@mixin easeOut {
+	transition: all 0.2s ease-out;
 }
 
 $bp-largest: 75em; // 1200px
@@ -45,8 +45,6 @@ body {
 	width: 100%;
 	height: 100vh;
 	position: relative;
-
-	animation: all 3s ease-out;
 }
 
 #particles-js {
@@ -61,12 +59,14 @@ body {
 
 nav {
 	@media only screen and (min-width: 320px) {
-		display: none;
-		margin-left: -100rem;
-		max-width: 75%;
-		opacity: 1;
+		visibility: hidden;
+		position: absolute;
+		transform: translate(-100rem);
+		max-width: 65%;
+		opacity: 0;
+		z-index: 10;
 
-		animation: all 3s ease-out;
+		@include easeOut;
 	}
 	display: flex;
 	flex-direction: column;
@@ -129,8 +129,6 @@ nav {
 	font-size: 1.5rem;
 	margin-top: 5rem;
 	@media only screen and (min-width: 320px) {
-		display: none;
-		margin-left: -100rem;
 		margin-top: 1rem;
 	}
 
@@ -177,6 +175,13 @@ nav {
 	#active {
 		color: #51bce7;
 		font-weight: 500;
+	}
+}
+
+header {
+	@media only screen and (min-width: 320px) {
+		padding: 1rem;
+		margin-top: 7rem;
 	}
 }
 
@@ -278,7 +283,11 @@ footer p {
 //========================== SHARED STYLES ===============================//
 
 .container {
-	width: 100%;
+	@media only screen and (min-width: 320px) {
+		padding: 0;
+		align-self: flex-start;
+	}
+	width: 100% !important;
 	height: 100vh;
 	padding: 5rem;
 	overflow-y: scroll;
@@ -299,13 +308,23 @@ footer p {
 	font-size: 3rem;
 	font-weight: 400;
 	padding: 4rem 0 2rem;
+
+	@media only screen and (min-width: 320px) {
+		line-height: 3rem;
+		font-size: 3rem;
+	}
 }
 
 .header-tertiary {
 	color: #ffffff;
 	font-size: 2rem;
 	font-weight: 200;
-	padding: 4rem 0 2rem;
+	padding: 4rem 2rem;
+
+	@media only screen and (min-width: 320px) {
+		font-weight: 400;
+		padding: 2rem;
+	}
 }
 
 .container {
@@ -340,43 +359,64 @@ footer p {
 }
 
 // ===================================== HAMBURGER MENU BUTTON ===================================//
-.menu_btn {
-	display: inline-block;
-	cursor: pointer;
-	position: absolute;
-	top: 2rem;
-	right: 2rem;
-}
+.mobile_nav {
+	background: #021a40;
+	margin-bottom: 2rem;
+	position: fixed;
+	padding: 1rem;
+	width: 100%;
+	-webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
+	box-shadow: 0px 2px 5px 0px rgba(3, 24, 95, 0.75);
 
-.bar1,
-.bar2,
-.bar3 {
-	width: 25px;
-	height: 3px;
-	background: #51bce7;
-	margin: 6px 0;
-	transition: 0.4s;
-	border-radius: 2px;
-}
+	&-text {
+		color: #51bce7;
+		font-size: 3rem;
+		font-weight: 500;
+		margin-right: 6rem;
+		text-align: right;
+	}
+	.menu_btn {
+		display: inline-block;
+		cursor: pointer;
+		position: absolute;
+		top: 1.5rem;
+		right: 2rem;
 
-.change .bar1 {
-	-webkit-transform: rotate(-45deg) translate(-9px, 6px);
-	transform: rotate(-45deg) translate(-5px, 4px);
-}
+		.bar1,
+		.bar2,
+		.bar3 {
+			width: 25px;
+			height: 3px;
+			background: #51bce7;
+			transition: 0.4s;
+			border-radius: 2px;
+		}
 
-.change .bar2 {
-	opacity: 0;
-}
+		.bar2 {
+			margin: 6px 0;
+		}
+	}
 
-.change .bar3 {
-	-webkit-transform: rotate(45deg) translate(-8px, -8px);
-	transform: rotate(45deg) translate(-8px, -8px);
+	.change .bar1 {
+		-webkit-transform: rotate(-45deg) translate(-9px, 6px);
+		transform: rotate(-45deg) translate(-5px, 4px);
+	}
+
+	.change .bar2 {
+		opacity: 0;
+	}
+
+	.change .bar3 {
+		-webkit-transform: rotate(45deg) translate(-8px, -8px);
+		transform: rotate(45deg) translate(-8px, -8px);
+	}
 }
 
 // ===================================== MOVING THE NAVBAR OFF THE SCREEN CLASSES
 
 .show {
-	display: block;
-	margin-left: 0;
-	animation: all 3s ease-out;
+	opacity: 1;
+	visibility: visible;
+	transform: translate(0);
 }
