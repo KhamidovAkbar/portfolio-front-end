@@ -29,22 +29,32 @@ $bp-smallest: 31.25em; // 500px
 html {
 	box-sizing: border-box;
 	font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
-	font-family: sans-serif, 'Halvetica';
-	overflow-y: scroll;
-	-ms-overflow-style: none; // IE 10+
-	scrollbar-width: none; // Firefox
+	font-family: 'Halvetica', sans-serif;
+	overflow: hidden;
 	@media only screen and (max-width: $bp-large) {
 		font-size: 50%;
 	}
+}
+
+body,
+html {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	overflow: auto;
 }
 
 // ======================  BODY ====================
 
 body {
 	display: flex;
-	width: 100%;
+	width: 100vw;
 	height: 100vh;
-	position: relative;
+	overflow-x: hidden;
+	-ms-overflow-style: none; // IE 10+
+	scrollbar-width: none; // Firefox
+	overflow-y: scroll; /* has to be scroll, not auto */
+	-webkit-overflow-scrolling: touch;
 }
 
 #particles-js {
@@ -63,8 +73,11 @@ nav {
 		position: absolute;
 		transform: translate(-100rem);
 		max-width: 65%;
+		height: 100vh;
 		opacity: 0;
 		z-index: 10;
+		overflow-y: scroll; /* has to be scroll, not auto */
+		-webkit-overflow-scrolling: touch;
 
 		@include easeOut;
 	}
@@ -229,7 +242,7 @@ footer p {
 	right: -25rem;
 
 	@media only screen and (min-width: 320px) {
-		top: 0;
+		top: -22rem;
 		bottom: 0;
 		left: 0;
 		right: 0rem;
@@ -245,7 +258,7 @@ footer p {
 		color: white;
 
 		@media only screen and (min-width: 320px) {
-			font-size: 3rem;
+			font-size: 4rem;
 		}
 
 		span {
@@ -256,7 +269,7 @@ footer p {
 
 	.secondary-text {
 		color: white;
-		font-size: 2.5rem;
+		font-size: 2.7rem;
 		text-align: center;
 		font-weight: 100;
 
@@ -286,6 +299,7 @@ footer p {
 	@media only screen and (min-width: 320px) {
 		padding: 0;
 		align-self: flex-start;
+		margin-bottom: 2rem;
 	}
 	width: 100% !important;
 	height: 100vh;
@@ -311,7 +325,7 @@ footer p {
 
 	@media only screen and (min-width: 320px) {
 		line-height: 3rem;
-		font-size: 3rem;
+		font-size: 4rem;
 	}
 }
 
@@ -323,7 +337,10 @@ footer p {
 
 	@media only screen and (min-width: 320px) {
 		font-weight: 400;
+		width: 100%;
+		font-size: 2.7rem;
 		padding: 2rem;
+		margin-left: -2rem;
 	}
 }
 

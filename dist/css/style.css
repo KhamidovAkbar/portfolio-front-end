@@ -13,19 +13,29 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
-  font-family: sans-serif, 'Halvetica';
-  overflow-y: scroll;
-  -ms-overflow-style: none;
-  scrollbar-width: none; }
+  font-family: 'Halvetica', sans-serif;
+  overflow: hidden; }
   @media only screen and (max-width: 68.75em) {
     html {
       font-size: 50%; } }
 
+body,
+html {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  overflow: auto; }
+
 body {
   display: flex;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
-  position: relative; }
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: scroll;
+  /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch; }
 
 #particles-js {
   position: absolute;
@@ -55,8 +65,12 @@ nav {
       position: absolute;
       transform: translate(-100rem);
       max-width: 65%;
+      height: 100vh;
       opacity: 0;
       z-index: 10;
+      overflow-y: scroll;
+      /* has to be scroll, not auto */
+      -webkit-overflow-scrolling: touch;
       transition: all 0.2s ease-out; } }
   nav img {
     display: block;
@@ -166,7 +180,7 @@ footer p {
   margin: auto; }
   @media only screen and (min-width: 320px) {
     .intro {
-      top: 0;
+      top: -22rem;
       bottom: 0;
       left: 0;
       right: 0rem; } }
@@ -179,13 +193,13 @@ footer p {
     color: white; }
     @media only screen and (min-width: 320px) {
       .intro .primary-text {
-        font-size: 3rem; } }
+        font-size: 4rem; } }
     .intro .primary-text span {
       color: #51bce7;
       font-weight: 600; }
   .intro .secondary-text {
     color: white;
-    font-size: 2.5rem;
+    font-size: 2.7rem;
     text-align: center;
     font-weight: 100; }
     .intro .secondary-text #title {
@@ -211,7 +225,8 @@ footer p {
   @media only screen and (min-width: 320px) {
     .container {
       padding: 0;
-      align-self: flex-start; } }
+      align-self: flex-start;
+      margin-bottom: 2rem; } }
 
 .header-primary,
 .header-icon {
@@ -228,7 +243,7 @@ footer p {
   @media only screen and (min-width: 320px) {
     .header-secondary {
       line-height: 3rem;
-      font-size: 3rem; } }
+      font-size: 4rem; } }
 
 .header-tertiary {
   color: #ffffff;
@@ -238,7 +253,10 @@ footer p {
   @media only screen and (min-width: 320px) {
     .header-tertiary {
       font-weight: 400;
-      padding: 2rem; } }
+      width: 100%;
+      font-size: 2.7rem;
+      padding: 2rem;
+      margin-left: -2rem; } }
 
 .container {
   overflow-y: scroll; }
@@ -334,7 +352,8 @@ footer p {
       .wrapper .description {
         max-width: 100%;
         padding: 1rem;
-        font-weight: 400; }
+        font-weight: 200;
+        font-size: 2.5rem; }
         .wrapper .credentials br,
         .wrapper .description br {
           margin-bottom: 1rem; } }
@@ -360,6 +379,10 @@ footer p {
           width: 30rem; } }
   .wrapper .credentials {
     font-size: 2.2rem; }
+    @media only screen and (min-width: 320px) {
+      .wrapper .credentials {
+        font-weight: 200;
+        font-size: 2.5rem; } }
     .wrapper .credentials ul {
       line-height: 4rem;
       list-style-type: none; }
@@ -368,6 +391,10 @@ footer p {
         font-size: 2.3rem;
         font-weight: 600;
         border-bottom: 2px solid #51bce7; }
+        @media only screen and (min-width: 320px) {
+          .wrapper .credentials ul .title {
+            font-weight: 200;
+            font-size: 2.5rem; } }
     .wrapper .credentials a,
     .wrapper .credentials a:link,
     .wrapper .credentials a:visited,
@@ -409,18 +436,17 @@ footer p {
         color: #ffffff;
         font-size: 1.5rem;
         font-weight: 100;
-        line-height: 2rem;
+        line-height: 1.5em;
         letter-spacing: 1px; }
         @media only screen and (min-width: 320px) {
           #skills .skills-list .skills-list-table ul li {
-            font-weight: 2rem;
-            font-weight: 400; } }
+            font-weight: 200;
+            font-size: 2.5rem; } }
 
 .project {
   background: #03285f;
   width: 100%;
   max-height: 40rem;
-  overflow-y: hidden;
   -webkit-box-shadow: 0px 10px 12px 0px #071142;
   -moz-box-shadow: 0px 10px 12px 0px #071142;
   box-shadow: 0px 10px 12px 0px #071142;
@@ -431,6 +457,16 @@ footer p {
   grid-template-columns: 1fr 1.5fr 0.5fr;
   grid-gap: 4rem;
   grid-auto-flow: row; }
+  @media only screen and (min-width: 320px) {
+    .project {
+      grid-auto-flow: column;
+      grid-template-rows: 1fr 1.5fr 0.5fr;
+      grid-template-columns: auto;
+      grid-gap: 2rem;
+      padding: 3rem; } }
+  @media only screen and (min-width: 320px) {
+    .project-details {
+      margin: 0 2rem; } }
   .project h3 {
     font-size: 2rem;
     display: inline-block;
@@ -441,6 +477,9 @@ footer p {
     width: 90%;
     height: 100%;
     border-radius: 1rem; }
+    @media only screen and (min-width: 320px) {
+      .project img {
+        width: 100%; } }
   .project-title {
     display: block;
     color: #ffffff;
@@ -456,6 +495,10 @@ footer p {
     line-height: 2.2rem;
     letter-spacing: 1px;
     color: white; }
+  @media only screen and (min-width: 320px) {
+    .project-technologies {
+      margin-left: -1.5rem;
+      width: 100%; } }
   .project-technologies li {
     float: left;
     margin: 1rem;
@@ -466,10 +509,18 @@ footer p {
     color: white;
     padding: 1rem;
     background: #0d3c83; }
+    @media only screen and (min-width: 320px) {
+      .project-technologies li {
+        margin: .5rem;
+        padding: .5rem; } }
   .project-actions {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly; }
+    @media only screen and (min-width: 320px) {
+      .project-actions {
+        flex-direction: row;
+        justify-content: space-between; } }
     .project-actions a,
     .project-actions a:link,
     .project-actions a:visited,
