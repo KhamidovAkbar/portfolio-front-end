@@ -22,9 +22,11 @@
 		grid-gap: 2rem;
 		padding: 1.5rem;
 		margin: 0 .5rem 2rem 0rem;
-		background: rgb(2, 0, 36);
-		background: rgb(9, 16, 121);
-		background: linear-gradient(355deg, rgba(9, 16, 121, 1) 61%, rgba(89, 31, 255, 1) 100%);
+		background: linear-gradient(355deg, rgb(0, 8, 119) 61%, rgb(36, 0, 136) 100%);
+
+		&:last-child {
+			margin-bottom: 3rem;
+		}
 	}
 
 	&-details {

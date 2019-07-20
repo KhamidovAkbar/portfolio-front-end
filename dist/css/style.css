@@ -24,7 +24,7 @@ html {
 body {
   display: flex;
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 56px);
   background: linear-gradient(84deg, #03285f 0%, #093679 66%, #1a3c78 100%);
   background: #021a40;
   z-index: -2;
@@ -39,6 +39,10 @@ body {
     body {
       background: linear-gradient(355deg, #020024 0%, #091079 47%, #771fff 100%); } }
 
+@-moz-document url-prefix() {
+  body {
+    height: 100vh; } }
+
 #particles-js {
   position: absolute;
   min-width: 100%;
@@ -51,7 +55,7 @@ body {
   @media only screen and (min-width: 320px) {
     #particles-js {
       background: #020024;
-      background: linear-gradient(355deg, #020024 0%, #091079 47%, #771fff 100%); } }
+      background: linear-gradient(355deg, #020024 0%, #091079 47%, #4300a7 100%); } }
 
 nav {
   display: flex;
@@ -226,12 +230,13 @@ footer p {
     border-color: transparent; } }
 
 .container {
-  width: 100% !important;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   padding: 5rem;
   overflow-y: scroll;
   -ms-overflow-style: none;
-  scrollbar-width: none; }
+  scrollbar-width: none;
+  overflow-x: hidden; }
   @media only screen and (min-width: 320px) {
     .container {
       padding: 0;
@@ -293,7 +298,7 @@ footer p {
     vertical-align: middle; }
 
 .mobile_nav {
-  background: #021a40;
+  background: transparent;
   margin-bottom: 2rem;
   position: fixed;
   padding: 1rem;
@@ -353,7 +358,7 @@ footer p {
       padding: 1rem; } }
   .wrapper .credentials,
   .wrapper .description {
-    max-width: 90%;
+    max-width: 100%;
     font-size: 1.7rem;
     color: #ffffff;
     line-height: 3rem;
@@ -480,9 +485,9 @@ footer p {
       grid-gap: 2rem;
       padding: 1.5rem;
       margin: 0 .5rem 2rem 0rem;
-      background: #020024;
-      background: #091079;
-      background: linear-gradient(355deg, #091079 61%, #591fff 100%); } }
+      background: linear-gradient(355deg, #000877 61%, #240088 100%); }
+      .project:last-child {
+        margin-bottom: 3rem; } }
   @media only screen and (min-width: 320px) {
     .project-details {
       display: none; } }
@@ -573,33 +578,46 @@ footer p {
 
 .contact {
   width: 50%; }
+  @media only screen and (min-width: 320px) {
+    .contact {
+      width: 100vw;
+      padding: 1rem; } }
   .contact ul {
     margin: 5rem; }
+    @media only screen and (min-width: 320px) {
+      .contact ul {
+        margin: 0; } }
     .contact ul li {
       list-style: none;
       display: grid;
       grid-template-columns: 0.5fr 1fr;
       grid-gap: 1rem; }
-      .contact ul li div {
-        font-size: 2rem;
-        padding: 1rem;
-        color: white;
-        font-weight: 200; }
-      .contact ul li a,
-      .contact ul li a:link,
-      .contact ul li a:visited,
-      .contact ul li a:active {
-        color: #51bce7;
-        display: inline-block;
-        text-decoration: none;
-        font-size: 2rem;
-        font-weight: 400;
-        text-decoration: none;
-        padding: 1rem;
-        text-align: left;
-        outline: 0; }
-        .contact ul li a:hover,
-        .contact ul li a:link:hover,
-        .contact ul li a:visited:hover,
-        .contact ul li a:active:hover {
-          border-left: 1px solid #51bce7; }
+    .contact ul div {
+      font-size: 2rem;
+      padding: 1rem;
+      color: white;
+      font-weight: 200; }
+    .contact ul a,
+    .contact ul a:link,
+    .contact ul a:visited,
+    .contact ul a:active {
+      color: #51bce7;
+      display: inline-block;
+      text-decoration: none;
+      font-size: 2rem;
+      font-weight: 400;
+      text-decoration: none;
+      padding: 1rem;
+      text-align: left;
+      outline: 0; }
+      .contact ul a:hover,
+      .contact ul a:link:hover,
+      .contact ul a:visited:hover,
+      .contact ul a:active:hover {
+        border-left: 1px solid #51bce7; }
+      @media only screen and (min-width: 320px) {
+        .contact ul a,
+        .contact ul a:link,
+        .contact ul a:visited,
+        .contact ul a:active {
+          padding: .5rem; } }

@@ -43,7 +43,7 @@ html {
 body {
 	display: flex;
 	width: 100vw;
-	height: 100vh;
+	height: calc(100vh - 56px);
 	background: linear-gradient(84deg, rgba(#03285f, 1) 0%, rgba(9, 54, 121, 1) 66%, rgba(26, 60, 120, 1) 100%);
 	background: #021a40;
 	z-index: -2;
@@ -58,6 +58,12 @@ body {
 	scroll-behavior: none;
 }
 
+@-moz-document url-prefix() {
+	body {
+		height: 100vh;
+	}
+}
+
 #particles-js {
 	position: absolute;
 	min-width: 100%;
@@ -69,7 +75,7 @@ body {
 	background: linear-gradient(84deg, rgba(#03285f, 1) 0%, rgba(9, 54, 121, 1) 66%, rgba(26, 60, 120, 1) 100%);
 	@media only screen and (min-width: 320px) {
 		background: rgb(2, 0, 36);
-		background: linear-gradient(355deg, rgba(2, 0, 36, 1) 0%, rgba(9, 16, 121, 1) 47%, rgba(119, 31, 255, 1) 100%);
+		background: linear-gradient(355deg, rgba(2, 0, 36, 1) 0%, rgba(9, 16, 121, 1) 47%, rgb(67, 0, 167) 100%);
 	}
 }
 
@@ -311,12 +317,13 @@ footer p {
 		align-self: flex-start;
 		margin-bottom: 2rem;
 	}
-	width: 100% !important;
-	height: 100vh;
+	width: 100%;
+	height: 100%;
 	padding: 5rem;
 	overflow-y: scroll;
 	-ms-overflow-style: none; // IE 10+
 	scrollbar-width: none; // Firefox
+	overflow-x: hidden;
 }
 
 .header-primary,
@@ -387,7 +394,7 @@ footer p {
 
 // ===================================== HAMBURGER MENU BUTTON ===================================//
 .mobile_nav {
-	background: #021a40;
+	background: transparent;
 	margin-bottom: 2rem;
 	position: fixed;
 	padding: 1rem;
