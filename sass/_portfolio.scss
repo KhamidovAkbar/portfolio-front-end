@@ -2,29 +2,34 @@
 	background: #03285f;
 	width: 100%;
 	max-height: 40rem;
-	-webkit-box-shadow: 0px 10px 12px 0px rgba(7, 17, 66, 1);
-	-moz-box-shadow: 0px 10px 12px 0px rgba(7, 17, 66, 1);
-	box-shadow: 0px 10px 12px 0px rgba(7, 17, 66, 1);
+	-webkit-box-shadow: 0px 10px 15px -2px rgba(7, 17, 66, 1);
+	-moz-box-shadow: 0px 10px 15px -2px rgba(7, 17, 66, 1);
+	box-shadow: 0px 10px 15px -2px rgba(7, 17, 66, 1);
 	border-radius: 1rem;
 
 	display: grid;
 	padding: 4rem;
-	margin-top: 3rem;
+	margin: 2rem 0;
 	grid-template-columns: 1fr 1.5fr 0.5fr;
 	grid-gap: 4rem;
 	grid-auto-flow: row;
 
 	@media only screen and (min-width: 320px) {
-		grid-auto-flow: column;
-		grid-template-rows: 1fr 1.5fr 0.5fr;
-		grid-template-columns: auto;
+		height: 50vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 		grid-gap: 2rem;
-		padding: 3rem;
+		padding: 1.5rem;
+		margin: 0 .5rem 2rem 0rem;
+		background: rgb(2, 0, 36);
+		background: rgb(9, 16, 121);
+		background: linear-gradient(355deg, rgba(9, 16, 121, 1) 61%, rgba(89, 31, 255, 1) 100%);
 	}
 
 	&-details {
 		@media only screen and (min-width: 320px) {
-			margin: 0 2rem;
+			display: none;
 		}
 	}
 
@@ -38,7 +43,7 @@
 
 	img {
 		width: 90%;
-		height: 100%;
+		height: 80%;
 		border-radius: 1rem;
 		@media only screen and (min-width: 320px) {
 			width: 100%;
@@ -111,14 +116,17 @@
 			box-shadow: 2px 5px 12px 0px rgba(7, 17, 66, 1);
 			-moz-box-shadow: 2px 5px 12px 0px rgba(7, 17, 66, 1);
 			background: linear-gradient(84deg, rgba(#03285f, 1) 0%, rgba(9, 54, 121, 1) 66%, rgba(26, 60, 120, 1) 100%);
-			border-radius: 2rem;
+			border-radius: 1rem;
 			text-decoration: none;
 			text-transform: uppercase;
 			font-size: 1.5rem;
-			padding: 1rem;
+			padding: .5rem 1.5rem;
 			outline: 0;
 
 			@media only screen and (min-width: 320px) {
+				&:nth-child(2) {
+					margin: 0 .5rem;
+				}
 			}
 			&:hover {
 				background: #51bce7;

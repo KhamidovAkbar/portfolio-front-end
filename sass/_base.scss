@@ -30,18 +30,12 @@ html {
 	box-sizing: border-box;
 	font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
 	font-family: 'Halvetica', sans-serif;
+	position: fixed;
+	height: 100%;
 	overflow: hidden;
 	@media only screen and (max-width: $bp-large) {
 		font-size: 50%;
 	}
-}
-
-body,
-html {
-	position: fixed;
-	height: 100%;
-	width: 100%;
-	overflow: auto;
 }
 
 // ======================  BODY ====================
@@ -50,11 +44,18 @@ body {
 	display: flex;
 	width: 100vw;
 	height: 100vh;
-	overflow-x: hidden;
+	background: linear-gradient(84deg, rgba(#03285f, 1) 0%, rgba(9, 54, 121, 1) 66%, rgba(26, 60, 120, 1) 100%);
+	background: #021a40;
+	z-index: -2;
+	@media only screen and (min-width: 320px) {
+		background: linear-gradient(355deg, rgba(2, 0, 36, 1) 0%, rgba(9, 16, 121, 1) 47%, rgba(119, 31, 255, 1) 100%);
+	}
 	-ms-overflow-style: none; // IE 10+
 	scrollbar-width: none; // Firefox
 	overflow-y: scroll; /* has to be scroll, not auto */
+	overflow-x: hidden;
 	-webkit-overflow-scrolling: touch;
+	scroll-behavior: none;
 }
 
 #particles-js {
@@ -62,7 +63,14 @@ body {
 	min-width: 100%;
 	height: 100vh;
 	z-index: -2;
+	display: flex;
+	width: 100vw;
+	height: 100vh;
 	background: linear-gradient(84deg, rgba(#03285f, 1) 0%, rgba(9, 54, 121, 1) 66%, rgba(26, 60, 120, 1) 100%);
+	@media only screen and (min-width: 320px) {
+		background: rgb(2, 0, 36);
+		background: linear-gradient(355deg, rgba(2, 0, 36, 1) 0%, rgba(9, 16, 121, 1) 47%, rgba(119, 31, 255, 1) 100%);
+	}
 }
 
 // ============================== PORTRAIT ========================
@@ -73,7 +81,7 @@ nav {
 		position: absolute;
 		transform: translate(-100rem);
 		max-width: 65%;
-		height: 100vh;
+		max-height: 100vh;
 		opacity: 0;
 		z-index: 10;
 		overflow-y: scroll; /* has to be scroll, not auto */
@@ -200,16 +208,18 @@ header {
 
 // =========================== FOOTER ===========================
 
+footer {
+	@media only screen and (min-width: 320px) {
+		margin-bottom: 5rem;
+	}
+}
+
 .social {
 	display: flex;
 	justify-content: space-evenly;
 	margin: 0 1.2rem;
 	font-size: 3rem;
 	color: #777777;
-
-	@media only screen and (min-width: 320px) {
-		margin-top: 1rem;
-	}
 
 	a {
 		text-decoration: none;
@@ -385,6 +395,7 @@ footer p {
 	-webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
 	-moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
 	box-shadow: 0px 2px 5px 0px rgba(3, 24, 95, 0.75);
+	background: linear-gradient(84deg, rgba(26, 60, 120, 1) 0%, rgba(9, 54, 121, 1) 66%, rgba(#03285f, 1) 100%);
 
 	&-text {
 		color: #51bce7;
@@ -436,4 +447,8 @@ footer p {
 	opacity: 1;
 	visibility: visible;
 	transform: translate(0);
+}
+
+.sc {
+	-webkit-overflow-scrolling: touch;
 }

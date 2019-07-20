@@ -1,5 +1,4 @@
 // FOR HAMBURGER MENU
-
 // Select DOM Items
 const menuBtn = document.querySelector('.menu_btn');
 const menu = document.querySelector('nav');
