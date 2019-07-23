@@ -11,8 +11,6 @@ function toggleMenu(x) {
 	x.classList.toggle('change');
 	menu.classList.toggle('show');
 	navContainer.classList.toggle('show');
-	// id.classList.toggle('show');
-	// footer.classList.toggle('show');
 	items.forEach((item) => item.classList.toggle('show'));
 }
 
