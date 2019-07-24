@@ -1,20 +1,21 @@
 .contact {
-	width: 50%;
-	@media only screen and (min-width: 320px) {
-		width: 100vw;
+	width: 55%;
+	margin: 5rem;
+	@media only screen and (min-width: 320px) and (max-width: 400px) {
 		padding: 1rem;
+		margin: 0;
 	}
 
 	ul {
-		margin: 5rem;
-		@media only screen and (min-width: 320px) {
-			margin: 0;
+		@media only screen and (min-width: 320px) and (max-width: 1000px) {
+			width: 100%;
 		}
 
 		li {
 			list-style: none;
 			display: grid;
-			grid-template-columns: 0.5fr 1fr;
+			justify-content: space-around;
+			grid-template-columns: 25% 35%;
 			grid-gap: 1rem;
 		}
 
@@ -31,20 +32,15 @@
 		a:active {
 			color: #51bce7;
 			display: inline-block;
-			text-decoration: none;
 			font-size: 2rem;
 			font-weight: 400;
-			text-decoration: none;
-			padding: 1rem;
+			padding-top: 1rem;
 			text-align: left;
 			outline: 0;
+			text-decoration: none;
 
 			&:hover {
-				border-left: 1px solid #51bce7;
-			}
-
-			@media only screen and (min-width: 320px) {
-				padding: .5rem;
+				text-decoration: underline;
 			}
 		}
 	}

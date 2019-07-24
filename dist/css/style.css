@@ -17,16 +17,20 @@ html {
   position: fixed;
   height: 100%;
   overflow: hidden; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 55%; } }
   @media only screen and (max-width: 68.75em) {
     html {
       font-size: 50%; } }
+  @media only screen and (max-width: 360px) {
+    html {
+      font-size: 43%; } }
 
 body {
   display: flex;
   width: 100vw;
   height: calc(100vh - 56px);
-  background: linear-gradient(84deg, #03285f 0%, #093679 66%, #1a3c78 100%);
-  background: #021a40;
   z-index: -2;
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -50,34 +54,32 @@ body {
   z-index: -2;
   display: flex;
   width: 100vw;
-  height: 100vh;
-  background: linear-gradient(84deg, #03285f 0%, #093679 66%, #1a3c78 100%); }
+  height: 100vh; }
   @media only screen and (min-width: 320px) {
     #particles-js {
       background: #020024;
-      background: linear-gradient(355deg, #020024 0%, #091079 47%, #4300a7 100%); } }
+      background: linear-gradient(350deg, #020024 0%, #001797 47%, #601ae2 100%); } }
 
 nav {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100vh;
-  max-width: 15%;
+  width: 25%;
   min-height: 100vh;
   overflow-y: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
   opacity: .88;
-  background: #03285f;
-  -webkit-box-shadow: 8px 2px 12px 0px #071142;
-  -moz-box-shadow: 8px 2px 12px 0px #071142;
-  box-shadow: 8px 2px 12px 0px #071142; }
-  @media only screen and (min-width: 320px) {
+  background: linear-gradient(350deg, #020024 0%, #001797 47%, #601ae2 100%);
+  -webkit-box-shadow: 2px 2px 12px 0px #071142;
+  -moz-box-shadow: 2px 2px 12px 0px #071142;
+  box-shadow: 2px 2px 12px 0px #01103a; }
+  @media only screen and (min-width: 320px) and (max-width: 1000px) {
     nav {
       visibility: hidden;
       position: absolute;
       transform: translate(-100rem);
-      max-width: 65%;
+      width: 65%;
       height: 100vh;
       opacity: 0;
       z-index: 10;
@@ -86,6 +88,10 @@ nav {
       /* has to be scroll, not auto */
       -webkit-overflow-scrolling: touch;
       transition: all 0.2s ease-out; } }
+  @media only screen and (min-width: 1000px) {
+    nav {
+      visibility: visible;
+      justify-content: space-around; } }
   nav img {
     display: block;
     opacity: 1;
@@ -95,8 +101,8 @@ nav {
     padding: 1px;
     border-radius: 50%;
     padding: 2px;
-    border: 1px solid #021a40;
-    background-color: #51bce7; }
+    border: 1px solid transparent;
+    background-color: transparent; }
   nav .id {
     margin-top: 5rem;
     max-width: 100%; }
@@ -114,9 +120,6 @@ nav {
     padding: 1.5rem .5rem;
     margin: 0 auto;
     color: #51bce7; }
-    @media only screen and (min-width: 320px) {
-      nav h1:last-child {
-        display: none; } }
     nav h1:not(:last-child) {
       border-bottom: 1px #202226 solid; }
 
@@ -162,12 +165,7 @@ nav {
     color: #51bce7;
     font-weight: 500; }
 
-@media only screen and (min-width: 320px) {
-  header {
-    padding: 1rem;
-    margin-top: 7rem; } }
-
-@media only screen and (min-width: 320px) {
+@media only screen and (min-width: 320px) and (max-width: 1000px) {
   footer {
     margin-bottom: 5rem; } }
 
@@ -202,7 +200,7 @@ footer p {
   margin: auto; }
   @media only screen and (min-width: 320px) {
     .intro {
-      top: -22rem;
+      top: 0rem;
       bottom: 0;
       left: 0;
       right: 0rem; } }
@@ -228,7 +226,10 @@ footer p {
       padding: .5rem;
       font-size: 3rem;
       font-weight: 500;
-      border-bottom: 2px solid #0a76eb; }
+      border-bottom: 2px solid #51bce7; }
+      @media only screen and (min-width: 320px) and (max-width: 400px) {
+        .intro .secondary-text #title {
+          border-bottom: 1px solid #51bce7; } }
       .intro .secondary-text #title span {
         border-right: .05em solid;
         animation: caret 1s steps(1) infinite; }
@@ -240,15 +241,13 @@ footer p {
 .container {
   width: 100%;
   height: 100%;
-  padding: 5rem;
   overflow-y: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
   overflow-x: hidden; }
-  @media only screen and (min-width: 320px) {
+  @media only screen and (min-width: 320px) and (max-width: 1000px) {
     .container {
       padding: 0;
-      align-self: flex-start;
       margin-bottom: 2rem; } }
 
 .header-primary,
@@ -275,9 +274,9 @@ footer p {
   font-weight: 200; }
   @media only screen and (min-width: 320px) {
     .header-tertiary {
-      font-weight: 400;
+      font-weight: 500;
       width: 100%;
-      font-size: 2.7rem;
+      font-size: 3.5rem;
       padding: 2rem 0;
       margin-right: -2rem; } }
 
@@ -289,6 +288,17 @@ footer p {
     display: flex;
     flex-direction: row;
     justify-content: space-between; }
+    @media only screen and (min-width: 320px) {
+      .container header {
+        padding: 1rem;
+        margin-top: 7rem; } }
+    @media only screen and (min-width: 1001px) {
+      .container header {
+        padding: 0 1rem;
+        margin-top: 2rem; } }
+
+.wapper {
+  margin: 1rem; }
 
 .notice {
   display: flex;
@@ -315,6 +325,9 @@ footer p {
   -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 2px 5px 0px rgba(3, 24, 95, 0.75);
   background: linear-gradient(84deg, #1a3c78 0%, #093679 66%, #03285f 100%); }
+  @media only screen and (min-width: 1001px) {
+    .mobile_nav {
+      display: none; } }
   .mobile_nav-text {
     color: #51bce7;
     font-size: 3rem;
@@ -351,19 +364,16 @@ footer p {
   visibility: visible;
   transform: translate(0); }
 
-.sc {
-  -webkit-overflow-scrolling: touch; }
-
 .wrapper {
+  margin: 1rem;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  margin-bottom: 2rem; }
+  justify-content: space-between; }
   @media only screen and (min-width: 320px) {
     .wrapper {
       flex-direction: column;
-      width: 100%;
-      padding: 1rem; } }
+      padding: 1rem;
+      margin: 0; } }
   .wrapper .credentials,
   .wrapper .description {
     max-width: 100%;
@@ -404,71 +414,45 @@ footer p {
         .wrapper .description #signature img {
           height: 5rem;
           width: 30rem; } }
-  .wrapper .credentials {
-    font-size: 2.2rem; }
-    @media only screen and (min-width: 320px) {
-      .wrapper .credentials {
-        font-weight: 200;
-        font-size: 2.5rem; } }
-    .wrapper .credentials ul {
-      line-height: 4rem;
-      list-style-type: none; }
-      .wrapper .credentials ul .title {
-        font-family: 'Times New Roman', Times, serif;
-        font-size: 2.3rem;
-        font-weight: 600;
-        border-bottom: 2px solid #51bce7; }
-        @media only screen and (min-width: 320px) {
-          .wrapper .credentials ul .title {
-            font-weight: 200;
-            font-size: 2.5rem; } }
-    .wrapper .credentials a,
-    .wrapper .credentials a:link,
-    .wrapper .credentials a:visited,
-    .wrapper .credentials a:active {
-      color: #ffffff;
-      display: inline-block;
-      background-color: #06224d;
-      border: 1px solid #51bce7;
-      text-transform: uppercase;
-      font-size: 1.4rem;
-      margin-top: 2rem;
-      padding: 1rem;
-      outline: 0; }
-      .wrapper .credentials a:hover,
-      .wrapper .credentials a:link:hover,
-      .wrapper .credentials a:visited:hover,
-      .wrapper .credentials a:active:hover {
-        background: #51bce7;
-        cursor: pointer;
-        font-weight: 500;
-        color: #01132e; }
 
 #skills {
-  margin: 2rem; }
+  margin: 1rem;
+  width: 100%; }
   #skills .skills-list {
     display: flex;
     flex-direction: row;
-    justify-content: space-between; }
-    @media only screen and (min-width: 320px) {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%; }
+    #skills .skills-list h3 {
+      font-size: 3.2rem;
+      font-weight: 500; }
+    @media only screen and (min-width: 320px) and (max-width: 500px) {
       #skills .skills-list {
-        flex-direction: column; } }
-    #skills .skills-list .skills-list-table ul {
-      margin-left: 2rem; }
-      @media only screen and (min-width: 320px) {
-        #skills .skills-list .skills-list-table ul {
-          margin-left: 4rem;
+        flex-direction: column;
+        justify-content: space-evenly; } }
+    #skills .skills-list .skills-list-table {
+      width: 33%; }
+      @media only screen and (min-width: 601px) and (max-width: 830px) {
+        #skills .skills-list .skills-list-table {
+          width: 45%;
+          margin-left: 2rem; } }
+      @media only screen and (min-width: 320px) and (max-width: 600px) {
+        #skills .skills-list .skills-list-table {
           width: 100%; } }
-      #skills .skills-list .skills-list-table ul li {
-        color: #ffffff;
-        font-size: 1.5rem;
-        font-weight: 100;
-        line-height: 1.5em;
-        letter-spacing: 1px; }
-        @media only screen and (min-width: 320px) {
-          #skills .skills-list .skills-list-table ul li {
-            font-weight: 200;
-            font-size: 2.5rem; } }
+      #skills .skills-list .skills-list-table ul {
+        margin-left: 4rem; }
+        #skills .skills-list .skills-list-table ul li {
+          color: #ffffff;
+          font-size: 2rem;
+          font-weight: 100;
+          line-height: 1.5em;
+          letter-spacing: 1px;
+          flex-basis: content; }
+          @media only screen and (min-width: 320px) {
+            #skills .skills-list .skills-list-table ul li {
+              font-weight: 200;
+              font-size: 2.5rem; } }
 
 .project {
   background: #03285f;
@@ -585,47 +569,40 @@ footer p {
         color: #01132e; }
 
 .contact {
-  width: 50%; }
-  @media only screen and (min-width: 320px) {
+  width: 55%;
+  margin: 5rem; }
+  @media only screen and (min-width: 320px) and (max-width: 400px) {
     .contact {
-      width: 100vw;
-      padding: 1rem; } }
-  .contact ul {
-    margin: 5rem; }
-    @media only screen and (min-width: 320px) {
-      .contact ul {
-        margin: 0; } }
-    .contact ul li {
-      list-style: none;
-      display: grid;
-      grid-template-columns: 0.5fr 1fr;
-      grid-gap: 1rem; }
-    .contact ul div {
-      font-size: 2rem;
       padding: 1rem;
-      color: white;
-      font-weight: 200; }
-    .contact ul a,
-    .contact ul a:link,
-    .contact ul a:visited,
-    .contact ul a:active {
-      color: #51bce7;
-      display: inline-block;
-      text-decoration: none;
-      font-size: 2rem;
-      font-weight: 400;
-      text-decoration: none;
-      padding: 1rem;
-      text-align: left;
-      outline: 0; }
-      .contact ul a:hover,
-      .contact ul a:link:hover,
-      .contact ul a:visited:hover,
-      .contact ul a:active:hover {
-        border-left: 1px solid #51bce7; }
-      @media only screen and (min-width: 320px) {
-        .contact ul a,
-        .contact ul a:link,
-        .contact ul a:visited,
-        .contact ul a:active {
-          padding: .5rem; } }
+      margin: 0; } }
+  @media only screen and (min-width: 320px) and (max-width: 1000px) {
+    .contact ul {
+      width: 100%; } }
+  .contact ul li {
+    list-style: none;
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: 25% 35%;
+    grid-gap: 1rem; }
+  .contact ul div {
+    font-size: 2rem;
+    padding: 1rem;
+    color: white;
+    font-weight: 200; }
+  .contact ul a,
+  .contact ul a:link,
+  .contact ul a:visited,
+  .contact ul a:active {
+    color: #51bce7;
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: 400;
+    padding-top: 1rem;
+    text-align: left;
+    outline: 0;
+    text-decoration: none; }
+    .contact ul a:hover,
+    .contact ul a:link:hover,
+    .contact ul a:visited:hover,
+    .contact ul a:active:hover {
+      text-decoration: underline; }

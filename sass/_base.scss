@@ -33,8 +33,16 @@ html {
 	position: fixed;
 	height: 100%;
 	overflow: hidden;
-	@media only screen and (max-width: $bp-large) {
+	@media only screen and (max-width: 75em) {
+		font-size: 55%;
+	}
+
+	@media only screen and (max-width: 68.75em) {
 		font-size: 50%;
+	}
+
+	@media only screen and (max-width: 360px) {
+		font-size: 43%;
 	}
 }
 
@@ -44,8 +52,6 @@ body {
 	display: flex;
 	width: 100vw;
 	height: calc(100vh - 56px);
-	background: linear-gradient(84deg, rgba(#03285f, 1) 0%, rgba(9, 54, 121, 1) 66%, rgba(26, 60, 120, 1) 100%);
-	background: #021a40;
 	z-index: -2;
 	@media only screen and (min-width: 320px) {
 		background: linear-gradient(355deg, rgba(2, 0, 36, 1) 0%, rgba(9, 16, 121, 1) 47%, rgba(119, 31, 255, 1) 100%);
@@ -72,21 +78,21 @@ body {
 	display: flex;
 	width: 100vw;
 	height: 100vh;
-	background: linear-gradient(84deg, rgba(#03285f, 1) 0%, rgba(9, 54, 121, 1) 66%, rgba(26, 60, 120, 1) 100%);
+	// background: linear-gradient(84deg, rgba(#03285f, 1) 0%, rgba(9, 54, 121, 1) 66%, rgba(26, 60, 120, 1) 100%);
 	@media only screen and (min-width: 320px) {
 		background: rgb(2, 0, 36);
-		background: linear-gradient(355deg, rgba(2, 0, 36, 1) 0%, rgba(9, 16, 121, 1) 47%, rgb(67, 0, 167) 100%);
+		background: linear-gradient(350deg, rgba(2, 0, 36, 1) 0%, rgb(0, 23, 151) 47%, rgb(96, 26, 226) 100%);
 	}
 }
 
 // ============================== PORTRAIT ========================
 
 nav {
-	@media only screen and (min-width: 320px) {
+	@media only screen and (min-width: 320px) and (max-width: 1000px) {
 		visibility: hidden;
 		position: absolute;
 		transform: translate(-100rem);
-		max-width: 65%;
+		width: 65%;
 		height: 100vh;
 		opacity: 0;
 		z-index: 10;
@@ -96,21 +102,27 @@ nav {
 
 		@include easeOut;
 	}
+
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	height: 100vh;
-	max-width: 15%;
+	width: 25%;
 	min-height: 100vh;
 	overflow-y: scroll;
 	-ms-overflow-style: none; // IE 10+
 	scrollbar-width: none; // Firefox
 
 	opacity: .88;
-	background: #03285f;
-	-webkit-box-shadow: 8px 2px 12px 0px rgba(7, 17, 66, 1);
-	-moz-box-shadow: 8px 2px 12px 0px rgba(7, 17, 66, 1);
-	box-shadow: 8px 2px 12px 0px rgba(7, 17, 66, 1);
+	background: linear-gradient(350deg, rgba(2, 0, 36, 1) 0%, rgb(0, 23, 151) 47%, rgb(96, 26, 226) 100%);
+
+	-webkit-box-shadow: 2px 2px 12px 0px rgba(7, 17, 66, 1);
+	-moz-box-shadow: 2px 2px 12px 0px rgba(7, 17, 66, 1);
+	box-shadow: 2px 2px 12px 0px rgb(1, 16, 58);
+
+	@media only screen and (min-width: 1000px) {
+		visibility: visible;
+		justify-content: space-around;
+	}
 
 	img {
 		display: block;
@@ -122,8 +134,8 @@ nav {
 		border-radius: 50%;
 
 		padding: 2px;
-		border: 1px solid #021a40;
-		background-color: #51bce7;
+		border: 1px solid transparent;
+		background-color: transparent;
 	}
 
 	.id {
@@ -145,11 +157,6 @@ nav {
 		padding: 1.5rem .5rem;
 		margin: 0 auto;
 		color: #51bce7;
-		@media only screen and (min-width: 320px) {
-			&:last-child {
-				display: none;
-			}
-		}
 		&:not(:last-child) {
 			border-bottom: 1px #202226 solid;
 		}
@@ -215,17 +222,10 @@ nav {
 	}
 }
 
-header {
-	@media only screen and (min-width: 320px) {
-		padding: 1rem;
-		margin-top: 7rem;
-	}
-}
-
 // =========================== FOOTER ===========================
 
 footer {
-	@media only screen and (min-width: 320px) {
+	@media only screen and (min-width: 320px) and (max-width: 1000px) {
 		margin-bottom: 5rem;
 	}
 }
@@ -268,7 +268,7 @@ footer p {
 	right: -25rem;
 
 	@media only screen and (min-width: 320px) {
-		top: -22rem;
+		top: 0rem;
 		bottom: 0;
 		left: 0;
 		right: 0rem;
@@ -303,7 +303,10 @@ footer p {
 			padding: .5rem;
 			font-size: 3rem;
 			font-weight: 500;
-			border-bottom: 2px solid #0a76eb;
+			border-bottom: 2px solid #51bce7;
+			@media only screen and (min-width: 320px) and (max-width: 400px) {
+				border-bottom: 1px solid #51bce7;
+			}
 
 			span {
 				border-right: .05em solid;
@@ -322,18 +325,16 @@ footer p {
 //========================== SHARED STYLES ===============================//
 
 .container {
-	@media only screen and (min-width: 320px) {
-		padding: 0;
-		align-self: flex-start;
-		margin-bottom: 2rem;
-	}
 	width: 100%;
 	height: 100%;
-	padding: 5rem;
 	overflow-y: scroll;
 	-ms-overflow-style: none; // IE 10+
 	scrollbar-width: none; // Firefox
 	overflow-x: hidden;
+	@media only screen and (min-width: 320px) and (max-width: 1000px) {
+		padding: 0;
+		margin-bottom: 2rem;
+	}
 }
 
 .header-primary,
@@ -362,9 +363,9 @@ footer p {
 	font-weight: 200;
 
 	@media only screen and (min-width: 320px) {
-		font-weight: 400;
+		font-weight: 500;
 		width: 100%;
-		font-size: 2.7rem;
+		font-size: 3.5rem;
 		padding: 2rem 0;
 		margin-right: -2rem;
 	}
@@ -380,7 +381,21 @@ footer p {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+
+		@media only screen and (min-width: 320px) {
+			padding: 1rem;
+			margin-top: 7rem;
+		}
+
+		@media only screen and (min-width: 1001px) {
+			padding: 0 1rem;
+			margin-top: 2rem;
+		}
 	}
+}
+
+.wapper {
+	margin: 1rem;
 }
 
 .notice {
@@ -412,6 +427,9 @@ footer p {
 	-moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
 	box-shadow: 0px 2px 5px 0px rgba(3, 24, 95, 0.75);
 	background: linear-gradient(84deg, rgba(26, 60, 120, 1) 0%, rgba(9, 54, 121, 1) 66%, rgba(#03285f, 1) 100%);
+	@media only screen and (min-width: 1001px) {
+		display: none;
+	}
 
 	&-text {
 		color: #51bce7;
@@ -463,8 +481,4 @@ footer p {
 	opacity: 1;
 	visibility: visible;
 	transform: translate(0);
-}
-
-.sc {
-	-webkit-overflow-scrolling: touch;
 }
