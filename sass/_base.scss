@@ -53,15 +53,21 @@ body {
 	width: 100vw;
 	height: calc(100vh - 56px);
 	z-index: -2;
-	@media only screen and (min-width: 320px) {
-		background: linear-gradient(355deg, rgba(2, 0, 36, 1) 0%, rgba(9, 16, 121, 1) 47%, rgba(119, 31, 255, 1) 100%);
-	}
+	background: linear-gradient(355deg, rgba(2, 0, 36, 1) 0%, rgba(9, 16, 121, 1) 47%, rgba(119, 31, 255, 1) 100%);
 	-ms-overflow-style: none; // IE 10+
 	scrollbar-width: none; // Firefox
 	overflow-y: scroll; /* has to be scroll, not auto */
 	overflow-x: hidden;
 	-webkit-overflow-scrolling: touch;
 	scroll-behavior: none;
+
+	@media only screen and (max-width: 319px) {
+		content: "Sorry, website don't support screens below 320px wide";
+		& * {
+			display: none;
+			visibility: hidden;
+		}
+	}
 }
 
 @-moz-document url-prefix() {
@@ -79,10 +85,8 @@ body {
 	width: 100vw;
 	height: 100vh;
 	// background: linear-gradient(84deg, rgba(#03285f, 1) 0%, rgba(9, 54, 121, 1) 66%, rgba(26, 60, 120, 1) 100%);
-	@media only screen and (min-width: 320px) {
-		background: rgb(2, 0, 36);
-		background: linear-gradient(350deg, rgba(2, 0, 36, 1) 0%, rgb(0, 23, 151) 47%, rgb(96, 26, 226) 100%);
-	}
+	background: rgb(2, 0, 36);
+	background: linear-gradient(350deg, rgb(1, 10, 92) 0%, rgb(0, 23, 151) 47%, rgb(96, 26, 226) 100%);
 }
 
 // ============================== PORTRAIT ========================
@@ -113,7 +117,7 @@ nav {
 	scrollbar-width: none; // Firefox
 
 	opacity: .88;
-	background: linear-gradient(350deg, rgba(2, 0, 36, 1) 0%, rgb(0, 23, 151) 47%, rgb(96, 26, 226) 100%);
+	background: linear-gradient(350deg, rgb(1, 10, 92) 0%, rgb(0, 23, 151) 47%, rgb(96, 26, 226) 100%);
 
 	-webkit-box-shadow: 2px 2px 12px 0px rgba(7, 17, 66, 1);
 	-moz-box-shadow: 2px 2px 12px 0px rgba(7, 17, 66, 1);
@@ -134,8 +138,7 @@ nav {
 		border-radius: 50%;
 
 		padding: 2px;
-		border: 1px solid transparent;
-		background-color: transparent;
+		background-color: #51bce7;
 	}
 
 	.id {
@@ -171,8 +174,8 @@ nav {
 	display: block;
 	font-size: 1.5rem;
 	margin-top: 5rem;
-	@media only screen and (min-width: 320px) {
-		margin-top: 2rem;
+	@media only screen and (min-width: 320px) and (max-width: 800px) {
+		margin-top: .5rem;
 		font-size: 1.7rem;
 	}
 
@@ -394,10 +397,6 @@ footer p {
 	}
 }
 
-.wapper {
-	margin: 1rem;
-}
-
 .notice {
 	display: flex;
 	align-items: center;
@@ -426,7 +425,7 @@ footer p {
 	-webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
 	-moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
 	box-shadow: 0px 2px 5px 0px rgba(3, 24, 95, 0.75);
-	background: linear-gradient(84deg, rgba(26, 60, 120, 1) 0%, rgba(9, 54, 121, 1) 66%, rgba(#03285f, 1) 100%);
+	background: linear-gradient(84deg, rgb(108, 22, 246) 0%, rgb(34, 15, 117) 66%, rgba(#14035f, 1) 100%);
 	@media only screen and (min-width: 1001px) {
 		display: none;
 	}

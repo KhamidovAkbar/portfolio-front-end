@@ -1,13 +1,10 @@
 .wrapper {
-	margin: 1rem;
-	@media only screen and (min-width: 320px) {
+	margin: 2rem;
+	@media only screen and (min-width: 320px) and (max-width: 800px) {
 		flex-direction: column;
 		padding: 1rem;
 		margin: 0;
 	}
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
 
 	.credentials,
 	.description {

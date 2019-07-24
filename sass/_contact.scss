@@ -6,10 +6,13 @@
 		margin: 0;
 	}
 
+	@media only screen and (min-width: 320px) and (max-width: 1000px) {
+		width: 100%;
+		margin: 0;
+	}
+
 	ul {
-		@media only screen and (min-width: 320px) and (max-width: 1000px) {
-			width: 100%;
-		}
+		width: 100%;
 
 		li {
 			list-style: none;
@@ -17,6 +20,12 @@
 			justify-content: space-around;
 			grid-template-columns: 25% 35%;
 			grid-gap: 1rem;
+
+			@media only screen and (min-width: 320px) and (max-width: 1000px) {
+				grid-template-columns: 35% 65%;
+				justify-content: space-between;
+				grid-gap: 0;
+			}
 		}
 
 		div {
