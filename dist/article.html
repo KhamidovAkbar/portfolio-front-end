@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+</main>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Code|Montserrat:400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Akbar Khamidov | Portfolio</title>
+  </head>
+
+  <body>
+    <!-- <div id="particles-js"></div> -->
+    <div class="menu_btn" onclick="toggleMenu(this)">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+    <nav>
+      <div>
+        <!-- for spacing -->
+        <div class="id">
+          <img src="./img/portrait.jpg" alt="self portrait">
+          <h1>Akbar Khamidov</h1>
+        </div>
+        <ul class="nav-items">
+          <li class="item"><a href="/dist/"> <i class="fas fa-home"></i>&nbsp; HOME </a></li>
+          <li class="item"><a href="about.html"> <i class="fas fa-user"></i>&nbsp; ABOUT</a></li>
+          <li class="item"><a href="portfolio.html"> <i class="fas fa-briefcase"></i>&nbsp;PORTFOLIO</a></li>
+          <li class="item"><a href="contact.html"> <i class="fas fa-envelope"></i>&nbsp; CONTACT</a></li>
+          <li class="item"><a href="blog.html" id="active"><i class="fab fa-readme"></i>&nbsp; BLOG <i
+                class="index fas fa-caret-left"></i></a></li>
+          <li class="item"><a href="#"> <i class="fas fa-download"></i>&nbsp;RESUME</a></li>
+        </ul>
+      </div>
+      <footer>
+        <div class="social">
+          <a href="https://twitter.com/khamidovakbar" target="_blank"><i class="fab fa-twitter-square"></i></a>
+          <a href="https://github.com/khamidovakbar" target="_blank"><i class="fab fa-github-square"></i></a>
+          <a href="https://linkedin.com/in/KhamidovAkbar" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="http://t.me/iamkhamidov" target="_blank"><i class="fab fa-telegram"></i></a>
+        </div>
+        <p>2019 &COPY;Akbar Khamidov. All&nbsp;Rights Reserved.</p>
+      </footer>
+    </nav>
+    <div class="container">
+      <div class="mobile_nav">
+        <h3 class="mobile_nav-text">Menu</h3>
+        <div class="menu_btn" onclick="toggleMenu(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+      </div>
+      <main class="article">
+        <article class="article-content">
+          <div class="article-content-header">
+            <h1 class="header-primary">Some stupid things</h1>
+            <span class="blog-date">Jul 27, &nbsp; 3 min read</span>
+          </div>
+          <img class="article-thumbnail" src="img/test-blog.jpg" alt="article thumbnail">
+          <p class="article-content-text">
+            A while back, I left the vast cesspool of mainstream social media for the weirder and wilder pastures of places like
+            Mastodon (and yes, I’m very smug about it). The downside is that I often don’t hear about new fads unless something goes
+            horribly wrong, which is exactly what happened when everyone had a collective freakout about FaceApp after initially
+            falling in love with it.
+            
+            FaceApp, in case you were like me and totally missed it, lets you apply filters to your face to appear aged and
+            decrepit, perhaps appealing to the much-documented millennial obsession with decay and eventual oblivion. FaceApp was
+            then accused of hijacking people’s personal information and photos and, gasp!, sending them to Russia. An internet poop
+            emoji storm ensued.
+            
+            This led my colleague Jose to ask a very reasonable question: “If one were to delete an app such as FaceApp, is the
+            damage of granting these apps access to your info already done or are you safe again?”
+            <pre>
+              <code>
+                x = 13.123553
+                # x = 13.5
+                # x = 27.8877
+                
+                x_string = str(x+0.5)
+                print(x_string[:x_string.find('.')])
+            </code>
+          </pre>
+            Security wonks often are snarky and dismissive of real, valuable questions like this. Many take the attitude that people
+            shouldn’t have downloaded the apps in the first place, which is not only unhelpful but further cements the security-wonk
+            reputation for hating fun. Jose’s question is valid: Does deleting an app that was snooping on you in any way make you
+            safe again? <a href="#">He says: </a>
+            <blockquote>
+              For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works
+              in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.
+            </blockquote>
+          </p>
+        </article>
+      </main>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+
+</html>
