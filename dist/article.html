@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css"/>
+    <link rel="stylesheet" href="css/prism.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Fira+Code|Montserrat:400,600,700&display=swap" rel="stylesheet">
@@ -77,16 +77,12 @@
             
             This led my colleague Jose to ask a very reasonable question: “If one were to delete an app such as FaceApp, is the
             damage of granting these apps access to your info already done or are you safe again?”
-            <pre>
-              <code>
-                x = 13.123553
-                # x = 13.5
-                # x = 27.8877
-                
-                x_string = str(x+0.5)
-                print(x_string[:x_string.find('.')])
-            </code>
-          </pre>
+              <pre>
+                <code class="language-python" contenteditable="true" spellcheck="false">
+for i in range(0,19):
+  print(f'{i}')
+              </code>
+            </pre>
             Security wonks often are snarky and dismissive of real, valuable questions like this. Many take the attitude that people
             shouldn’t have downloaded the apps in the first place, which is not only unhelpful but further cements the security-wonk
             reputation for hating fun. Jose’s question is valid: Does deleting an app that was snooping on you in any way make you
@@ -95,11 +91,25 @@
               For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works
               in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.
             </blockquote>
+
+            <pre>
+              <code class="language-javascript" contenteditable="true" spellcheck="false">
+const person = {
+first: 'Wes',
+last: 'Bos',
+country: 'Canada',
+city: 'Hamilton',
+twitter: '@wesbos'
+};
+const first = person.first;
+const last = person.last;
+              </code>
+            </pre>
           </p>
         </article>
       </main>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+    <script src="js/prism.js"></script>
     <script src="js/main.js"></script>
   </body>
 
