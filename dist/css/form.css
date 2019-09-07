@@ -1,0 +1,12 @@
+input[type="text"],
+select,
+textarea {
+	/* background: rgba(26, 60, 120, 1) !important; */
+	background: #03285f !important;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	color: white !important;
+}
+
+#title {
+	font-size: 2em !important;
+}
