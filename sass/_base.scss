@@ -1,5 +1,9 @@
 $profile-shadow: 0 2rem 6rem rgba(20, 5, 45, 0.302);
-$hover-shadow: -2px 0px 21px 12px rgba(81, 188, 231, 0.75);
+$hover-shadow: -2px 0px 21px 12px #51bce7;
+$bg-color-main: black;
+$bg-color-secondary:  rgb(12, 12, 12);
+$txt-color-white: rgb(216, 206, 206);
+$accent-main: #51bce7;
 
 @mixin easeOut {
 	transition: all 0.2s ease-out;
@@ -53,7 +57,7 @@ body {
 	width: 100vw;
 	z-index: -2;
 	height: calc(100vh - 5rem);
-	background: linear-gradient(355deg, rgba(2, 0, 36, 1) 0%, rgba(9, 16, 121, 1) 47%, rgba(119, 31, 255, 1) 100%);
+	background: $bg-color-main;
 	-webkit-overflow-scrolling: touch;
 	scroll-behavior: none;
 
@@ -80,9 +84,7 @@ body {
 	display: flex;
 	width: 100vw;
 	height: 100vh;
-	// background: linear-gradient(84deg, rgba(#03285f, 1) 0%, rgba(9, 54, 121, 1) 66%, rgba(26, 60, 120, 1) 100%);
-	background: #2218b2;
-	background: linear-gradient(350deg, rgb(16, 1, 85) 0%, rgb(23, 0, 151) 47%, rgb(96, 26, 226) 100%);
+
 }
 
 // ============================== PORTRAIT ========================
@@ -110,11 +112,8 @@ nav {
 	scrollbar-width: none; // Firefox
 
 	opacity: 1;
-	background: linear-gradient(350deg, rgb(16, 1, 85) 0%, rgb(23, 0, 151) 47%, rgb(96, 26, 226) 100%);
-
-	-webkit-box-shadow: 2px 2px 10px -3px rgba(7, 17, 66, 1);
-	-moz-box-shadow: 2px 2px 10px -3px rgba(7, 17, 66, 1);
-	box-shadow: 2px 2px 10px -3px rgb(1, 16, 58);
+	background: $bg-color-main;
+	border-right: 1px solid $bg-color-secondary;
 
 	@media only screen and (min-width: 1000px) {
 		visibility: visible;
@@ -127,11 +126,6 @@ nav {
 		height: 15rem;
 		width: 15rem;
 		margin: 1rem auto;
-		padding: 1px;
-		border-radius: 50%;
-
-		padding: 2px;
-		background-color: #51bce7;
 	}
 
 	.id {
@@ -274,7 +268,7 @@ footer p {
 		font-size: 5rem;
 		font-weight: 500;
 		font-family: serif;
-		color: white;
+		color: $txt-color-white;
 
 		@media only screen and (min-width: 320px) {
 			font-size: 4rem;
@@ -287,7 +281,7 @@ footer p {
 	}
 
 	.secondary-text {
-		color: white;
+		color: $txt-color-white;
 		font-size: 2.7rem;
 		text-align: center;
 		font-weight: 100;
@@ -412,10 +406,6 @@ footer p {
 	padding: 1rem;
 	width: 100%;
 	z-index: 10;
-	-webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
-	-moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
-	box-shadow: 0px 2px 5px 0px rgba(3, 24, 95, 0.75);
-	background: linear-gradient(84deg, rgb(108, 22, 246) 0%, rgb(34, 15, 117) 66%, rgba(#14035f, 1) 100%);
 	@media only screen and (min-width: 1001px) {
 		display: none;
 	}
