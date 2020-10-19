@@ -567,19 +567,24 @@ footer p {
         margin: 0 .5rem 2rem 0rem; }
         .projects_container .project:last-child {
           margin-bottom: 3rem; } }
-    @media only screen and (min-width: 320px) and (max-width: 600px) {
-      .projects_container .project-details {
-        display: none; } }
-    @media only screen and (min-width: 600px) and (max-width: 800px) {
-      .projects_container .project-details {
-        padding: 0;
-        margin-right: -8rem; } }
+    .projects_container .project-details {
+      margin-left: 2rem; }
+      @media only screen and (min-width: 600px) and (max-width: 800px) {
+        .projects_container .project-details {
+          padding: 0;
+          margin-right: -8rem; } }
+      @media only screen and (min-width: 320px) and (max-width: 600px) {
+        .projects_container .project-details {
+          margin-left: 0; } }
     .projects_container .project h3 {
       font-size: 2rem;
       display: inline-block;
       color: #51bce7;
       font-weight: 400;
       margin: 1rem 0 1rem -2rem; }
+      @media only screen and (min-width: 320px) and (max-width: 600px) {
+        .projects_container .project h3 {
+          display: none; } }
     .projects_container .project img {
       width: 100%;
       height: 100%;
@@ -594,15 +599,34 @@ footer p {
       font-size: 3rem;
       font-weight: 400;
       margin-left: -3rem; }
+      @media only screen and (min-width: 320px) and (max-width: 600px) {
+        .projects_container .project-title {
+          margin-left: 0; } }
+      .projects_container .project-title a,
+      .projects_container .project-title a:link,
+      .projects_container .project-title a:visited,
+      .projects_container .project-title a:active {
+        color: #51bce7;
+        text-align: right;
+        display: inline-block;
+        text-decoration: none;
+        font-size: 3rem;
+        outline: 0; }
     .projects_container .project-description {
       color: white;
       font-size: 1.5rem;
       padding: 1rem; }
+      @media only screen and (min-width: 320px) and (max-width: 600px) {
+        .projects_container .project-description {
+          display: none; } }
     .projects_container .project-features li {
       font-size: 1.5rem;
       line-height: 2.2rem;
       letter-spacing: 1px;
       color: white; }
+    @media only screen and (min-width: 320px) and (max-width: 600px) {
+      .projects_container .project-features {
+        display: none; } }
     @media only screen and (min-width: 320px) {
       .projects_container .project-technologies {
         margin-left: -1.5rem;
@@ -621,50 +645,40 @@ footer p {
         .projects_container .project-technologies li {
           margin: .5rem;
           padding: .5rem; } }
-    .projects_container .project-actions {
+    @media only screen and (min-width: 320px) and (max-width: 600px) {
+      .projects_container .project-technologies {
+        display: none; } }
+    .projects_container .project-github {
       display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      width: 100%; }
-      @media only screen and (min-width: 320px) and (max-width: 600px) {
-        .projects_container .project-actions {
-          flex-direction: row;
-          justify-content: space-around;
-          margin-bottom: 2rem; } }
-      .projects_container .project-actions a,
-      .projects_container .project-actions a:link,
-      .projects_container .project-actions a:visited,
-      .projects_container .project-actions a:active {
+      justify-content: right; }
+      .projects_container .project-github a,
+      .projects_container .project-github a:link,
+      .projects_container .project-github a:visited,
+      .projects_container .project-github a:active {
         color: #51bce7;
-        text-align: left;
+        text-align: right;
         display: inline-block;
         text-decoration: none;
-        text-transform: uppercase;
-        font-size: 1.5rem;
+        font-size: 3rem;
         outline: 0; }
         @media only screen and (min-width: 600px) and (max-width: 800px) {
-          .projects_container .project-actions a,
-          .projects_container .project-actions a:link,
-          .projects_container .project-actions a:visited,
-          .projects_container .project-actions a:active {
-            font-size: 1.2rem; } }
-        @media only screen and (min-width: 320px) {
-          .projects_container .project-actions a:nth-child(2),
-          .projects_container .project-actions a:link:nth-child(2),
-          .projects_container .project-actions a:visited:nth-child(2),
-          .projects_container .project-actions a:active:nth-child(2) {
-            margin: 0 .5rem; } }
-  @media only screen and (min-width: 320px) and (min-width: 601px) and (max-width: 800px) {
-    .projects_container .project-actions a:nth-child(2),
-    .projects_container .project-actions a:link:nth-child(2),
-    .projects_container .project-actions a:visited:nth-child(2),
-    .projects_container .project-actions a:active:nth-child(2) {
-      margin: .5rem 0; } }
-        .projects_container .project-actions a:hover,
-        .projects_container .project-actions a:link:hover,
-        .projects_container .project-actions a:visited:hover,
-        .projects_container .project-actions a:active:hover {
-          cursor: pointer; }
+          .projects_container .project-github a,
+          .projects_container .project-github a:link,
+          .projects_container .project-github a:visited,
+          .projects_container .project-github a:active {
+            font-size: 2rem; } }
+        @media only screen and (min-width: 320px) and (max-width: 600px) {
+          .projects_container .project-github a,
+          .projects_container .project-github a:link,
+          .projects_container .project-github a:visited,
+          .projects_container .project-github a:active {
+            display: none; } }
+        .projects_container .project-github a:hover,
+        .projects_container .project-github a:link:hover,
+        .projects_container .project-github a:visited:hover,
+        .projects_container .project-github a:active:hover {
+          cursor: pointer;
+          color: #51bce7; }
 
 .article {
   background: black;
