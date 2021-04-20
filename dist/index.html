@@ -1,65 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <title>Akbar Khamidov | Portfolio</title>
-</head>
-<body>
-  <div id="particles-js"></div>
-  <nav>
-    <div> <!--for spacing -->
-      <div class="id">
-        <img src="./img/icon.svg" alt="self portrait" >
-        <h1>Akbar Khamid</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Akbar Khamid | Portfolio</title>
+  </head>
+  <body>
+    <div id="particles-js"></div>
+    <nav>
+      <div>
+        <!--for spacing -->
+        <div class="id">
+          <img src="./img/icon.svg" alt="self portrait" />
+          <h1>Akbar Khamid</h1>
+        </div>
+        <ul class="nav-items">
+          <li class="item">
+            <a href="/" id="active">
+              <i class="fas fa-home"></i>&nbsp; HOME
+              <i class="index fas fa-caret-left"></i
+            ></a>
+          </li>
+          <li class="item">
+            <a href="about.html"> <i class="fas fa-user"></i>&nbsp; ABOUT</a>
+          </li>
+          <li class="item">
+            <a href="portfolio.html">
+              <i class="fas fa-briefcase"></i>&nbsp; PORTFOLIO</a
+            >
+          </li>
+          <li class="item">
+            <a href="contact.html">
+              <i class="fas fa-envelope"></i>&nbsp; CONTACT</a
+            >
+          </li>
+          <li class="item">
+            <a href="blog.html"> <i class="fab fa-readme"></i>&nbsp; BLOG</a>
+          </li>
+          <li class="item">
+            <a href="#"> <i class="fas fa-download"></i>&nbsp;RESUME</a>
+          </li>
+        </ul>
       </div>
-      <ul class="nav-items">
-        <li class="item"><a href="/" id="active"> <i class="fas fa-home" ></i>&nbsp; HOME <i class="index fas fa-caret-left"></i></a></li>
-        <li class="item"><a href="about.html"> <i class="fas fa-user" ></i>&nbsp; ABOUT</a></li>
-        <li class="item"><a href="portfolio.html"> <i class="fas fa-briefcase" ></i>&nbsp; PORTFOLIO</a></li>
-        <li class="item"><a href="contact.html"> <i class="fas fa-envelope" ></i>&nbsp; CONTACT</a></li>
-        <li class="item"><a href="blog.html"> <i class="fab fa-readme" ></i>&nbsp; BLOG</a></li>
-        <li class="item"><a href="#"> <i class="fas fa-download"></i>&nbsp;RESUME</a></li>
-      </ul>
+      <footer>
+        <div class="social">
+          <a href="https://twitter.com/AkbarKhamid" target="_blank"
+            ><i class="fab fa-twitter-square"></i
+          ></a>
+          <a href="https://github.com/AkbarKhamid" target="_blank"
+            ><i class="fab fa-github-square"></i
+          ></a>
+          <a href="https://linkedin.com/in/AkbarKhamid" target="_blank"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+        </div>
+        <p>All&nbsp;Rights Reserved.</p>
+      </footer>
+    </nav>
+    <div class="container">
+      <main>
+        <div class="mobile_nav">
+          <div class="menu_btn" onclick="toggleMenu(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+        </div>
+        <section class="intro">
+          <div>
+            <h2 class="secondary-text">Hi, my name is</h2>
+            <h1 class="primary-text">Akbar <span>Khamid</span></h1>
+            <h2 class="secondary-text">and</h2>
+            <h2 class="secondary-text">
+              I am a <span id="title">Web Developer</span>.
+            </h2>
+          </div>
+        </section>
+      </main>
     </div>
-    <footer>
-      <div class="social">
-        <a href="https://twitter.com/khamidovakbar" target="_blank"><i class="fab fa-twitter-square"></i></a>
-        <a href="https://github.com/khamidovakbar" target="_blank"><i class="fab fa-github-square"></i></a>
-        <a href="https://linkedin.com/in/KhamidovAkbar" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="http://t.me/iamkhamidov" target="_blank"><i class="fab fa-telegram"></i></a>
-      </div>
-      <p>All&nbsp;Rights Reserved.</p>
-    </footer>
-  </nav>
-  <div class="container">
-    <main>
-      <div class="mobile_nav">
-        <div class="menu_btn" onclick="toggleMenu(this)">
-          <div class="bar1"></div>
-          <div class="bar2"></div>
-          <div class="bar3"></div>
-        </div>
-      </div>
-      <section class="intro">
-        <div>
-          <h2 class="secondary-text">Hi, my name is </h2>
-          <h1 class="primary-text">Akbar <span>Khamidov</span></h1>
-          <h2 class="secondary-text"> and </h2>
-          <h2 class="secondary-text">I am a <span id="title">Web Developer</span>.</h2>
-        </div>
-      </section>
-    </main>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-  <script src="js/main.js"></script>
-  <script>
-    particlesJS.load('particles-js', 'js/particles_config.json', function(){console.log('Particles JS has been loaded')});
-  </script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      particlesJS.load("particles-js", "js/particles_config.json", function () {
+        console.log("Particles JS has been loaded");
+      });
+    </script>
+  </body>
 </html>
